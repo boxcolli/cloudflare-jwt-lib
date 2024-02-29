@@ -10,13 +10,12 @@ A lightweight JWT implementation with ZERO dependencies for Cloudflare Workers.
 - [Usage](#usage)
     - [Sign](#sign)
     - [Verify](#verify)
-    - [Decode](#decode)
 
 
 ## Install
 
 ```
-npm i @tsndr/cloudflare-worker-jwt
+npm i @boxcolli/cloudflare-jwt-lib
 ```
 
 
