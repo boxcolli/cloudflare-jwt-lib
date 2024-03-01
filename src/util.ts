@@ -1,10 +1,10 @@
-export function encode(str: string): string {
+export function base64UrlEncode(str: string): string {
     return base64ToBase64Url(
         stringToBase64(str)
     )
 }
 
-export function decode(base64Url: string): string {
+export function base64UrlDecode(base64Url: string): string {
     return base64ToString(
         base64UrlToBase64(base64Url)
     )

@@ -1,6 +1,6 @@
 {
   "name": "@boxcolli/cloudflare-jwt-lib",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A lightweight JWT implementation",
   "type": "module",
   "exports": "./index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://https://github.com/boxcolli/cloudflare-jwt-lib.git"
+    "url": "https://https://github.com/boxcolli/cloudflare-jwt-lib.git"
   },
   "keywords": [
     "jwt",
@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://https://github.com/boxcolli/cloudflare-jwt-lib/issues"
   },
-  "homepage": "https://https://github.com/boxcolli/cloudflare-jwt-lib#readme",
+  "homepage": "https://github.com/boxcolli/cloudflare-jwt-lib",
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240222.0",
     "@edge-runtime/vm": "^3.2.0",

@@ -1,4 +1,4 @@
-import { encode, decode } from "./util";
+import { base64UrlEncode, base64UrlDecode } from "./util";
 
 export interface Header {
     typ?: string
@@ -22,8 +22,8 @@ export async function getToken<H = Header, P = Payload>(
     payload: P,
     sign: (data: string) => Promise<string>,
 ): Promise<string> {
-    const h = encode(JSON.stringify(header))
-    const p = encode(JSON.stringify(payload))
+    const h = base64UrlEncode(JSON.stringify(header))
+    const p = base64UrlEncode(JSON.stringify(payload))
     const part = h + "." + p
     const s = await sign(part)
 
@@ -36,8 +36,8 @@ export async function verifyToken<H = Header, P = Payload>(
     signByHeader: (h: H, data: string) => Promise<string>,
 ): Promise<[boolean, P]> {
     const parts = token.split(".")
-    const h: H = JSON.parse(decode(parts[0]))
-    const p: P = JSON.parse(decode(parts[1]))
+    const h: H = JSON.parse(base64UrlDecode(parts[0]))
+    const p: P = JSON.parse(base64UrlDecode(parts[1]))
 
     if (! await verifyPayload(p)) return [false, p]
 
